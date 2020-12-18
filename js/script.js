@@ -10,10 +10,8 @@ jQuery(document).ready(function($){
                 
                 const {id, name, image} = information;
     
-                        return `
-    
-                        <div data-id="${id}" class=" media m-4 border bg-light singleCon">
-                                
+                    return `
+                        <div data-id="${id}" class=" media m-4 border bg-light singleCon"> 
                         <img class = "conpic" src="${image}" alt="${name}">
                         <div class="media-body">
                         <h4 class = "consoleText">${name}<h4>
@@ -21,8 +19,7 @@ jQuery(document).ready(function($){
                         <button class = "detailButton btn btn-primary" >Detail</button>
                         </div>
                         </div>
-                        </div> 
-                        `;
+                        </div> `;
             }).join('');
             $('#con').html(consoleInfo);}, 1500);
     })
@@ -32,7 +29,6 @@ jQuery(document).ready(function($){
         const id = $(this).attr('data-id');
         const getEachCon = axios.get(`http://csc225.mockable.io/consoles/${id}`);
         getEachCon.then(function(detailData){
-            console.log(detailData);
 
             const SingleConsole = detailData.data;
         setTimeout(() => { 

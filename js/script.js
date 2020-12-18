@@ -67,7 +67,7 @@ function move() {
     var width = 0; 
     var identity = setInterval(scene, 10); 
     function scene() { 
-      if (width >= 200) { 
+      if (width >= 250) { 
         clearInterval(scene);
         element.style.width = 0;
         width = 0;  
